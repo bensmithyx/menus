@@ -1,2 +1,2 @@
 # meuns
-Easy menu CLI menu creation tool
+Easy CLI menu creation tool
