@@ -21,25 +21,6 @@ class Menu():
         self.options = options
         self.result = result
 
-    # Function to get input with formated and coloured chacters
-    def getinput(self, title, options, result):
-        while True:
-            try:
-                if not options:
-                    return "Error: No options found"
-
-                choice = int(input(f"({Colour.text}{title}{Colour.Reset}) > "))
-
-                if 0 < choice <= len(options):
-                    if result == 'value':
-                        return options[choice-1]
-                    else:
-                        return choice
-                else:
-                    display("Invalid Option")
-            except Exception:
-                display("Invalid Option")
-
     def show(self):
         print(f"{Colour.bracketsymbol}[{Colour.plussymbol}+{Colour.bracketsymbol}]{Colour.Yellow} {self.title}\t",end="")
         if type(self.options) == type([]):
@@ -49,7 +30,7 @@ class Menu():
         elif type(self.options) == type(""):
             print(f"{Colour.Yellow}[1] {self.options}{Colour.Reset}\n",end="")
 
-        self.value = self.getinput(self.title, self.options, self.result)
+        self.value = getinput(self.title, self.options, self.result)
 
     def update(self, title=None, options=None, result=None):
         if title != None:
@@ -58,6 +39,49 @@ class Menu():
             self.options = options
         if result != None:
             self.result = result
+
+
+class List():
+    def __init__(self, title="List",options=[],result='index'):
+        self.title = title
+        self.options = options
+        self.result = result
+
+    def show(self):
+        if type(self.options) == type(""):
+            self.options = [self.options]
+
+        for index, name in enumerate(self.options, 1):
+            display(f'{index} - {name}')
+
+        self.value = getinput('Option',self.options,self.result)
+
+    def update(self, title=None, options=None, result=None):
+        if title != None:
+            self.title = title
+        if options != None:
+            self.options = options
+        if result != None:
+            self.result = result
+
+# Function to get input with formated and coloured chacters
+def getinput(title, options, result):
+    while True:
+        try:
+            if not options:
+                return "Error: No options found"
+
+            choice = int(input(f"({Colour.text}{title}{Colour.Reset}) > "))
+
+            if 0 < choice <= len(options):
+                if result == 'value':
+                    return options[choice-1]
+                else:
+                    return choice
+            else:
+                display("Invalid Option")
+        except Exception:
+            display("Invalid Option")
 
 # Displays text in a nice colourful format
 def display(text):
