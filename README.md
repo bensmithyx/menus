@@ -2,9 +2,9 @@
 Easy CLI menu creation tool
 
 # Installation
-```pip install python-menu```
+`pip install python-menu`
 
-# Example
+# Menu Example
 ```py
 >>> from menu import *
 >>>  menu1 = Menu(title="Menu1",options=["option1","option2","option3"], result="index"
@@ -21,4 +21,24 @@ Easy CLI menu creation tool
 (Menu) > 1
 >>> print(menu1.value)
 option1
+```
+# Menu Example
+```py
+>>> from menu import *
+>>> list1 = List(title="List1", options="Option 1",result="index")
+>>> list1.show()
+[+] 1 - Option 1
+
+(Option) > 1
+>>> print(list1.value)
+1
+>>> list1.update(title="Update List1", options=["Option 1","Option 2"],result="value")
+>>> list1.show()
+[+] 1 - Option 1
+
+[+] 2 - Option 2
+
+(Option) > 2
+>>> print(list1.value)
+Option 2
 ```
