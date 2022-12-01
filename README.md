@@ -1,6 +1,9 @@
 # Menus
 Easy CLI menu creation tool
 
+# Installation
+```pip install python-menu```
+
 # Example
 ```py
 >>> from menu import *
