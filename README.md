@@ -3,7 +3,7 @@ Easy CLI menu creation tool
 
 # Example
 ```py
->>> from menus import *
+>>> from menu import *
 >>>  menu1 = Menu(title="Menu1",options=["option1","option2","option3"], result="index"
 >>> menu1.show()
 [+] Menu1        [1] option1     [2] option2     [3] option3

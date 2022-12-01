@@ -4,8 +4,8 @@ from pathlib import Path
 this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 setup(
-    name='menus',
-    version='0.1.7',
+    name='python-menu',
+    version='1.0.0',
     description='Easy menu tool for gathering inputs',
     long_description = long_description,
     long_description_content_type='text/markdown',
@@ -13,7 +13,7 @@ setup(
     author='Ben Smith',
     author_email='ben.work.smith@gmail.com',
     license='GNU GPLv3',
-    packages=["menus"],
+    packages=["menu"],
     install_requires=[],
 
 

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: menus
-Version: 0.1.7
+Name: python-menu
+Version: 1.0.0
 Summary: Easy menu tool for gathering inputs
 Home-page: https://github.com/bensmithyx/menus.git
 Author: Ben Smith
