@@ -5,7 +5,7 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 setup(
     name='python-menu',
-    version='1.1.0',
+    version='1.1.4',
     description='Easy menu tool for gathering inputs',
     long_description = long_description,
     long_description_content_type='text/markdown',

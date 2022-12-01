@@ -22,11 +22,13 @@ Easy CLI menu creation tool
 >>> print(menu1.value)
 option1
 ```
-# Menu Example
+
+# List Example
 ```py
 >>> from menu import *
 >>> list1 = List(title="List1", options="Option 1",result="index")
 >>> list1.show()
+[+] List1
 [+] 1 - Option 1
 
 (Option) > 1
@@ -34,6 +36,7 @@ option1
 1
 >>> list1.update(title="Update List1", options=["Option 1","Option 2"],result="value")
 >>> list1.show()
+[+] Update List1
 [+] 1 - Option 1
 
 [+] 2 - Option 2

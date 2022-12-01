@@ -48,6 +48,7 @@ class List():
         self.result = result
 
     def show(self):
+        print(f"{Colour.bracketsymbol}[{Colour.plussymbol}+{Colour.bracketsymbol}]{Colour.Yellow} {self.title}")
         if type(self.options) == type(""):
             self.options = [self.options]
 

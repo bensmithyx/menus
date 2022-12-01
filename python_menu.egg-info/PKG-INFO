@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: python-menu
-Version: 1.1.0
+Version: 1.1.3
 Summary: Easy menu tool for gathering inputs
 Home-page: https://github.com/bensmithyx/menus.git
 Author: Ben Smith
@@ -10,9 +10,9 @@ Description: # Menus
         Easy CLI menu creation tool
         
         # Installation
-        ```pip install python-menu```
+        `pip install python-menu`
         
-        # Example
+        # Menu Example
         ```py
         >>> from menu import *
         >>>  menu1 = Menu(title="Menu1",options=["option1","option2","option3"], result="index"
@@ -29,6 +29,26 @@ Description: # Menus
         (Menu) > 1
         >>> print(menu1.value)
         option1
+        ```
+        # List Example
+        ```py
+        >>> from menu import *
+        >>> list1 = List(title="List1", options="Option 1",result="index")
+        >>> list1.show()
+        [+] 1 - Option 1
+        
+        (Option) > 1
+        >>> print(list1.value)
+        1
+        >>> list1.update(title="Update List1", options=["Option 1","Option 2"],result="value")
+        >>> list1.show()
+        [+] 1 - Option 1
+        
+        [+] 2 - Option 2
+        
+        (Option) > 2
+        >>> print(list1.value)
+        Option 2
         ```
         
 Platform: UNKNOWN
