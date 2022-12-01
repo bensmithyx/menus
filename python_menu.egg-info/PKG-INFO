@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: python-menu
-Version: 1.0.1
+Version: 1.0.2
 Summary: Easy menu tool for gathering inputs
 Home-page: https://github.com/bensmithyx/menus.git
 Author: Ben Smith
@@ -8,6 +8,9 @@ Author-email: ben.work.smith@gmail.com
 License: GNU GPLv3
 Description: # Menus
         Easy CLI menu creation tool
+        
+        # Installation
+        ```pip install python-menu```
         
         # Example
         ```py

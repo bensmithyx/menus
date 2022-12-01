@@ -14,16 +14,12 @@ class Colour:
     plussymbol = Red
     lines = White
     text = Yellow
-    
+
 class Menu():
     def __init__(self, title="Menu",options=[],result='index'):
         self.title = title
         self.options = options
         self.result = result
-
-    # Displays text in a nice colourful format
-    def display(self, text):
-        print(f"{Colour.bracketsymbol}[{Colour.plussymbol}+{Colour.bracketsymbol}] {Colour.Reset}{text}\n")
 
     # Function to get input with formated and coloured chacters
     def getinput(self, title, options, result):
@@ -40,9 +36,9 @@ class Menu():
                     else:
                         return choice
                 else:
-                    self.display("Invalid Option")
+                    display("Invalid Option")
             except Exception:
-                self.display("Invalid Option")
+                display("Invalid Option")
 
     def show(self):
         print(f"{Colour.bracketsymbol}[{Colour.plussymbol}+{Colour.bracketsymbol}]{Colour.Yellow} {self.title}\t",end="")
@@ -62,3 +58,7 @@ class Menu():
             self.options = options
         if result != None:
             self.result = result
+
+# Displays text in a nice colourful format
+def display(text):
+    print(f"{Colour.bracketsymbol}[{Colour.plussymbol}+{Colour.bracketsymbol}] {Colour.Reset}{text}\n")
