@@ -25,7 +25,7 @@ def getinput(title, options, result):
             choice = int(input(f"({Colour.text}{title}{Colour.Reset}) > "))
 
             if 0 < choice <= len(options):
-                if result == 'index':
+                if result == 'value':
                     return choice
                 else:
                     return options[choice]

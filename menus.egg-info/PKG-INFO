@@ -1,14 +1,23 @@
-Metadata-Version: 1.1
+Metadata-Version: 2.1
 Name: menus
-Version: 0.1.1
+Version: 0.1.5
 Summary: Easy menu tool for gathering inputs
 Home-page: https://github.com/bensmithyx/menus.git
 Author: Ben Smith
 Author-email: ben.work.smith@gmail.com
 License: GNU GPLv3
-Description: UNKNOWN
+Description: # menus
+        Easy CLI menu creation tool
+        
+        # Example
+        ```answer = menu(title='Menu',options=['title1','title2'], result='index'))```
+        
 Platform: UNKNOWN
 Classifier: Development Status :: 1 - Planning
 Classifier: Intended Audience :: Science/Research
 Classifier: Operating System :: POSIX :: Linux
 Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
