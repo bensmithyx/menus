@@ -16,22 +16,25 @@ class Colour:
     text = Yellow
 
 class Menu():
+    # Takes in three optional attributes to change the title, options shown and result type given (index, actually value)
     def __init__(self, title="Menu",options=[],result='index'):
         self.title = title
         self.options = options
         self.result = result
 
     def show(self):
+        # Displays the title of the menu
         print(f"{Colour.bracketsymbol}[{Colour.plussymbol}+{Colour.bracketsymbol}]{Colour.Yellow} {self.title}\t",end="")
         if type(self.options) == type([]):
+            # Displays the options given
             for index, option in enumerate(self.options):
                 print(f"{Colour.Yellow}[{index+1}] {option}\t",end="")
             print(f"{Colour.Reset}\n")
         elif type(self.options) == type(""):
             print(f"{Colour.Yellow}[1] {self.options}{Colour.Reset}\n",end="")
-
+        # Stores the value of the user input
         self.value = getinput(self.title, self.options, self.result)
-
+    # Set the default values if no attributes are given
     def update(self, title=None, options=None, result=None):
         if title != None:
             self.title = title
